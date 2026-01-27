@@ -32,6 +32,13 @@ html body {
     width: 700px;
     height: 600px;
     /* background-color: #0a0908; */
+    background-color: cadetblue;
+}
+
+.box-login h2 {
+    text-align: center;
+    color: #fff;
+    
 }
 
 .box-element {
