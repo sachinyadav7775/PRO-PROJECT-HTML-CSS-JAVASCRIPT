@@ -54,11 +54,11 @@ html, body {
 .box-input input:focus + label,
 .box-input input:valid + label {
     top: 0;
-    font-size: 16px;
     padding: 4px;
+    font-size: 16px;
+    border-radius: 4px;
     color: #ffffff;
     background: #2f3a3c;
-    border-radius: 4px;
     border-left: 3px solid #89ff87;
     border-right: 3px solid #89ff87;
 }
