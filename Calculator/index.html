@@ -7,44 +7,47 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
-
     <body>
 
         <div class="container">
 
             <div class="box">
                 <div class="calculator-text">
-                    <input type="text" class="calculator-text" readonly>
+                    <input type="text" id="calculator-display" readonly>
                 </div>
-                <button class="button button1">AC</button>
-                <button class="button button1">%</button>
-                <button class="button button1">( )</button>
-                <button class="button button1">!</button>
-                <button class="button button1">1</button>
-                <button class="button button1">2</button>
-                <button class="button button1">3</button>
-                <button class="button button1">*</button>
-                <button class="button button1">4</button>
-                <button class="button button1">5</button>
-                <button class="button button1">6</button>
-                <button class="button button1">-</button>
-                <button class="button button1">7</button>
-                <button class="button button1">8</button>
-                <button class="button button1">9</button>
-                <button class="button button1">+</button>
-                <button class="button button1">=</button>
-                <button class="button button1">.</button>
-                <button class="button button1">/</button>
-                <button class="button button1">
-                    <span>
-                        <i class="fa-regular fa-rectangle-xmark"></i>
-                    </span>
+
+                <button class="button button-AC" onclick="clearDisplay()">AC</button>
+                <button class="button button2" onclick="appendValue('%')">%</button>
+                <button class="button button2" onclick="appendValue('!')">!</button>
+
+                <button class="button button2" onclick="appendValue('/')">/</button>
+                <button class="button button1" onclick="appendValue('1')">1</button>
+                <button class="button button1" onclick="appendValue('2')">2</button>
+                <button class="button button1" onclick="appendValue('3')">3</button>
+
+                <button class="button button2" onclick="appendValue('*')">*</button>
+                <button class="button button1" onclick="appendValue('4')">4</button>
+                <button class="button button1" onclick="appendValue('5')">5</button>
+                <button class="button button1" onclick="appendValue('6')">6</button>
+
+                <button class="button button2" onclick="appendValue('-')">-</button>
+                <button class="button button1" onclick="appendValue('7')">7</button>
+                <button class="button button1" onclick="appendValue('8')">8</button>
+                <button class="button button1" onclick="appendValue('9')">9</button>
+
+                <button class="button button2" onclick="appendValue('+')">+</button>
+                <button class="button button1" onclick="appendValue('0')">0</button>
+                <button class="button button1" onclick="calculate()">=</button>
+                <button class="button button1" onclick="appendValue('.')">.</button>
+
+                <button class="button button-delete" onclick="deleteLast()">
+                    <span><i class="fa-solid fa-delete-left"></i></span>
                 </button>
+
             </div>
             
         </div>
 
         <script src="script.js"></script>
     </body>
-
 </html>
