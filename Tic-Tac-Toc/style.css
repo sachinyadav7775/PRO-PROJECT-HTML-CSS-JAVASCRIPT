@@ -33,33 +33,52 @@ body {
     width: 120px;
     height: 120px;
     border: none;
+    cursor: pointer;
     font-size: 40px;
     color: #00FF00;
     border-radius: 15px;
     background: #353839;
 }
 
+.btn:hover {
+    transition: 1s;
+    background: #404547;
+}
+
 .btn-game {
     width: 150px;
     height: 50px;
     border: none;
+    cursor: pointer;
     font-size: 18px;
+    font-weight: 600;
     border-radius: 2px;
     margin-bottom: 20px;
     background: #dafeb6;
-    font-family: sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn-game:hover {
+    transition: 1s;
+    background: #caff96;
 }
 
 .btn-reset {
     width: 200px;
     height: 50px;
     border: none;
+    cursor: pointer;
     font-size: 20px;
     font-weight: 600;
     margin-top: 20px;
     border-radius: 4px;
-    background: #00b4d8;
+    background: #0bd3fb;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btn-reset:hover {
+    transition: 1s;
+    background: #00b4d8;
 }
 
 .game-text > h1 {
