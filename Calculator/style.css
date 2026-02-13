@@ -56,9 +56,19 @@
     background: #ff0000;
 }
 
+.button-AC:hover {
+    transition: 1s;
+    background: #ff2929;
+}
+
 .button-delete {
     color: #ffffff;
     background: #4a4e69;
+}
+
+.button-delete:hover {
+    transition: 1s;
+    background: #5c607e;
 }
 
 .button1 {
@@ -66,6 +76,16 @@
     background: #8d99ae;
 }
 
+.button1:hover {
+    transition: 1s;
+    background: #a6b4cb;
+}
+
 .button2 {
     background: #a2d2ff;
+}
+
+.button2:hover {
+    transition: 1s;
+    background: #b6dcff;
 }
