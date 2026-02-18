@@ -5,9 +5,54 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Rock Paper Scissors</title>
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     </head>
 
     <body>
+
+        <div class="main">
+
+
+            <div class="text-iteam">
+                <h2>Rock Paper Scissors</h2>
+            </div>
+
+            <div class="circles">
+                <div class="circle">
+                    <img src="images/rock.png" alt="Img">
+                </div>
+
+                <div class="circle">
+                    <img src="images/paper.png" alt="Img">
+                </div>
+
+                <div class="circle">
+                    <img src="images/scissors.png" alt="Img">
+                </div>
+            </div>
+            
+            
+            <div class="score-board">
+                <div class="score">
+                    <p id="user-score">0</p>
+                    <p>Human</p>
+                </div>
+                <div class="line"></div>
+                <div class="score">
+                    <p id="comp-score">0</p>
+                    <p>Computer</p>
+                </div>
+            </div>
+
+            <div class="msg-container">
+                <p id="msg">Play your move</p>
+            </div>
+
+            <div class="btn-container">
+                <button id="restart-btn">Restart Game</button>
+            </div>
+
+        </div>
 
         <script src="script.js"></script>
     </body>
