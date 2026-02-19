@@ -77,10 +77,20 @@ img {
 }
 
 .msg-container {
-    padding: 20px;
     color: #fff;
-    font-size: 32px;
+    font-size: 26px;
+    padding: 20px 0px;
+    border-radius: 4px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#message {
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #252729;
 }
 
 .line {
