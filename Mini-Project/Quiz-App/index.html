@@ -1,57 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Quiz App</title>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    </head>
 
-    <body>
-    
-        <div class="container">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
 
-            <div class="text-iteam">
+<body>
 
-                <div class="img">
-                    <img src="image/Programming.svg" alt="image" height="400">
-                </div>
+    <div class="container">
 
-                <h2>
-                    <span>Build Quiz App With <br></span>
-                    <span>HTML</span> ,
-                    <span>CSS</span> And
-                    <span>JAVASCRIPT</span>
-                </h2>
+        <div class="text-item">
 
+            <div class="img">
+                <img src="image/Programming.svg" alt="image">
             </div>
 
-            <div class="box">
+            <h2>
+                <span>Build Quiz App With <br></span>
+                <span>HTML</span> ,
+                <span>CSS</span> And
+                <span>JAVASCRIPT</span>
+            </h2>
 
+        </div>
+
+        <div class="box">
+
+            <div class="quiz-header">
                 <h2>Simple Quiz</h2>
+                <span id="score-display">Score: 0</span>
+            </div>
 
+            <div id="quiz-area">
                 <div class="question-para">
-                    <p>1. What is very small indian city ?</p>
-
+                    <p id="question-text">Loading...</p>
                 </div>
 
-                <div class="btns">
-                    <button class="btn">Option A</button>
-                    <button class="btn">Option B</button>
-                    <button class="btn">Option C</button>
-                    <button class="btn">Option D</button>
+                <div class="btns" id="options">
+                    <!-- Options will be generated with JavaScript -->
                 </div>
 
                 <div class="btn-next">
-                    <button id="next">Next</button>
+                    <button id="next" style="display: none;">Next</button>
                 </div>
-                
+            </div>
+
+            <div id="result-area" style="display: none;">
+                <h3>Quiz Completed!</h3>
+                <p>Your Final Score:</p>
+                <h1 id="final-score">0 / 0</h1>
+                <button class="btn" id="restart">Play Again</button>
             </div>
 
         </div>
 
-        <script src="script.js"></script>
-    </body>
+    </div>
 
-</html>
+    <script src="script.js"></script>
+</body>
+
+</html>                                                                                                                                                                                 
