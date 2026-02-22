@@ -1,0 +1,16 @@
+.border {
+    border: 1px solid black;
+}
+
+.flex {
+    display: flex;
+    gap: 3px;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justiry-center {
+    justify-content: space-between;
+}
