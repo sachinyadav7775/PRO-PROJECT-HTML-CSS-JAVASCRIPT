@@ -13,27 +13,34 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    padding: 8px;
+    gap: 10px;
 }
 
 .nav {
-    background: #111;
+    background: #000;
     color: white;
     padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .main {
     display: flex;
     flex: 1;
     overflow: hidden;
+    gap: 10px;
 }
 
 /* LEFT SIDEBAR */
 .left-box {
-    width: 25%;
+    width: 420px;
     background: #121212;
     padding: 8px;
     display: flex;
     flex-direction: column;
+    border-radius: 8px;
 }
 
 .library-box {
@@ -148,16 +155,20 @@ body {
 
 /* RIGHT SIDE */
 .right-box {
-    width: 75%;
+    width: 75vw;
     background: #181818;
     color: white;
     padding: 20px;
+    border-radius: 8px;
+    overflow: auto;
+    position: relative;
 }
 
 /* BOTTOM PANEL */
 .panal {
+    overflow: hidden;
     background-image: linear-gradient(90deg, #af2896, #509bf5);
-    padding: 15px 20px;
+    padding: 11px 24px 7px 15px;
 }
 
 .text {
@@ -166,20 +177,23 @@ body {
     align-items: center;
 }
 
-.element p:first-child {
+.element p:nth-child(1) {
+    color: #ffffff;
+    font-size: 14px;
     font-weight: 700;
-    color: white;
 }
 
-.element p:last-child {
-    font-size: 14px;
-    color: white;
+.element p:nth-child(2) {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .panal-btn {
+    height: 48px;
     background: #fff;
     border: none;
-    padding: 10px 24px;
+    padding: 8px 32px;
     border-radius: 50px;
     font-weight: 700;
     cursor: pointer;
