@@ -53,12 +53,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px;
+    padding: 16px 16px 8px;
     color: #fff;
 }
 
 .header-text h1 {
-    font-size: 16px;
+    margin: 0px 0px 0px 4px;
+    font-size: 1rem;
 }
 
 .header-btn {
@@ -85,12 +86,20 @@ body {
 .section {
     background: #1f1f1f;
     border-radius: 8px;
-    margin: 10px;
-    padding: 16px;
+    margin: 8px 0px;
+    padding: 16px 20px;
     color: #fff;
 }
 
-.section-text div:first-child {
+.text-span {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.text-span span:first-child {
+    color: #fff;
+    font-size: 1rem;
     font-weight: 700;
 }
 
@@ -108,6 +117,7 @@ body {
     border-radius: 50px;
     font-weight: 600;
     cursor: pointer;
+    gap: 20px;
 }
 
 .lib-btn:hover {
@@ -165,6 +175,9 @@ body {
 }
 
 /* BOTTOM PANEL */
+.aside {
+    padding: 8px;
+}
 .panal {
     overflow: hidden;
     background-image: linear-gradient(90deg, #af2896, #509bf5);
