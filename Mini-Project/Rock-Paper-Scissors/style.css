@@ -21,8 +21,8 @@
 }
 
 .circles {
-    height: 40vh;
     gap: 20px;
+    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
