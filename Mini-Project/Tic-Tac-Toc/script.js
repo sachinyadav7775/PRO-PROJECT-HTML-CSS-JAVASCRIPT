@@ -1,7 +1,7 @@
-let buttons = document.querySelectorAll('.btn');
-let restartButton = document.querySelector('.btn-reset');
-let newButton = document.querySelector('.btn-game');
 let msg = document.querySelector('.msg');
+let buttons = document.querySelectorAll('.btn');
+let newButton = document.querySelector('.btn-game');
+let restartButton = document.querySelector('.btn-reset');
 
 let turn = true; // O ki turn
 
@@ -21,9 +21,13 @@ buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
         if (turn) {
             btn.innerText = "O";
+            btn.style.backgroundColor = "#4c5c68";
+            btn.style.color = "#fff";
             turn = false;
         } else {
             btn.innerText = "X";
+            btn.style.backgroundColor = "#9db4c0";
+            btn.style.color = "#000";
             turn = true;
         }
         btn.disabled = true;
@@ -44,6 +48,8 @@ const enableButtons = () => {
     buttons.forEach((btn) => {
         btn.disabled = false;
         btn.innerText = "";
+        btn.style.backgroundColor = "";  // color reset
+        btn.style.color = "";
     });
 };
 
@@ -76,6 +82,7 @@ const resetGame = () => {
     enableButtons();
     msg.classList.add("hide");
     msg.innerText = "";
+
 };
 
 restartButton.addEventListener("click", resetGame);
