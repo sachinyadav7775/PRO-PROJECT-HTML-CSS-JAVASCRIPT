@@ -76,6 +76,10 @@ img {
     color: red;
 }
 
+#draw-score {
+    color: yellow;
+}
+
 .msg-container {
     color: #fff;
     font-size: 26px;

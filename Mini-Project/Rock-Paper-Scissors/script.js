@@ -1,11 +1,13 @@
+let gameDraw = 0;
 let Humanscore = 0;
 let Compuscore = 0;
 
+const msg = document.querySelector("#message");
 const Choices = document.querySelectorAll(".circle");
 const Restart = document.querySelector("#restart-btn");
-const msg = document.querySelector("#message");
-const Humanscoreboard = document.querySelector("#user-score")
-const Computerscoreboard = document.querySelector("#comp-score")
+const Drawscoreboard = document.querySelector("#draw-score");
+const Humanscoreboard = document.querySelector("#user-score");
+const Computerscoreboard = document.querySelector("#comp-score");
 
 // Corrected computer choice generator
 const genCompChoice = () => {
@@ -16,23 +18,25 @@ const genCompChoice = () => {
 
 // Draw message
 const drawGame = () => {
-    console.log("Game Was Draw.");
+    // console.log("Game Was Draw.");
     msg.innerHTML = "Game Was Draw";
     msg.style.backgroundColor = "yellow";
     msg.style.color = "black";
+    gameDraw++;
+    Drawscoreboard.innerHTML = gameDraw;
 }
 
 // Show winner
 const showWinner = (userWin, userChoice, compChoice) => {
     if(userWin) {
-        console.log("You Win");
+        // console.log("You Win");
         msg.innerHTML = `You Winner! Your ${userChoice} beats ${compChoice}`;
         msg.style.backgroundColor = "springgreen";
         msg.style.color = "black";
         Humanscore++;
         Humanscoreboard.innerHTML = Humanscore;
     } else {
-        console.log("You Lose");
+        // console.log("You Lose");
         msg.innerHTML = `You Lose ${compChoice} beats Your ${userChoice}`;
         msg.style.backgroundColor = "red";
         msg.style.color = "#fff";
@@ -70,8 +74,10 @@ Choices.forEach((circle) => {
 
 const Restartgame = () => {
     // Reset scores
+    gameDraw = 0;
     Humanscore = 0;
     Compuscore = 0;
+    Drawscoreboard.innerHTML = gameDraw;
     Humanscoreboard.innerHTML = Humanscore;
     Computerscoreboard.innerHTML = Compuscore;
 
@@ -79,6 +85,7 @@ const Restartgame = () => {
     msg.innerHTML = "Play your move";
     msg.style.backgroundColor = "#252729";
     msg.style.color = "#fff";
+
 };
 
 Restart.addEventListener("click", Restartgame);
