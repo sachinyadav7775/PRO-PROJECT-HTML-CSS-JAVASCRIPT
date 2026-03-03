@@ -13,12 +13,12 @@
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
     gap: 15px;
     padding: 20px;
-    background: #000;
+    display: flex;
+    flex-direction: column;
     border-radius: 6px;
+    background: #000;
     border: 1px solid rgb(33, 32, 32);
     box-shadow: 0px 0px 10px 5px rgb(54, 53, 53);
 }
@@ -30,8 +30,8 @@
 }
 
 .button {
-    width: 350px;
     gap: 20px;
+    width: 350px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -39,13 +39,21 @@
 }
 
 .btns {
-    border: none;
-    height: 70px;
     width: 70px;
-    cursor: pointer;
+    height: 70px;
+    border: none;
     color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
     border-radius: 4px;
     background: #502F5B;
+}
+
+.btns.flipped {
+    background: #fff;
+    color: #000;
+    transform: rotateY(180deg);
+    transition: 0.5s;
 }
 
 .btns:hover {
@@ -54,51 +62,45 @@
 }
 
 .time {
+    color: #fff;
     text-align: center;
-    color: rgb(255, 255, 255);
 }
 
 .time span {
-    font-size: 1.2rem;
     font-weight: 600;
+    font-size: 1.2rem;
     letter-spacing: 0.1rem;
 }
 
 .reset-btn {
     margin-top: 10px;
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#play-btn {
+#play-btn, #rst-btn {
+    border: none;
     color: #fff;
     padding: 20px;
-    border: none;
     cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
-    letter-spacing: 0.05rem;
     border-radius: 4px;
+    letter-spacing: 0.05rem;
+}
+
+#play-btn {
     background: #E72C0D;
+}
+
+#rst-btn {
+    background: #E88E1A;
 }
 
 #play-btn:hover {
     transition: 0.2s;
     box-shadow: 0px 0px 6px 3px #c62a0f;
-}
-
-#rst-btn {
-    padding: 20px;
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 4px;
-    cursor: pointer;
-    letter-spacing: 0.05rem;
-    background: #E88E1A;
 }
 
 #rst-btn:hover {
