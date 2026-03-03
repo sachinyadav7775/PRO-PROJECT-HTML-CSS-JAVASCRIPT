@@ -50,10 +50,14 @@
 }
 
 .btns.flipped {
-    background: #fff;
-    color: #000;
-    transform: rotateY(180deg);
     transition: 0.5s;
+    background: #3F3F42;
+    transform: rotateY(180deg);
+}
+
+.btns.flipped:hover {
+    transition: 0.2s;
+    box-shadow: 0px 0px 5px 5px #555559;
 }
 
 .btns:hover {
