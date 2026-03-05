@@ -46,7 +46,10 @@
     font-size: 2rem;
     cursor: pointer;
     border-radius: 4px;
+    position: relative;
     background: #502F5B;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
 }
 
 .btns.flipped {
@@ -63,6 +66,10 @@
 .btns:hover {
     transition: 0.2s;
     box-shadow: 0px 0px 5px 5px #6f447e;
+}
+
+.btns i {
+    transform: rotateY(-180deg);
 }
 
 .time {
