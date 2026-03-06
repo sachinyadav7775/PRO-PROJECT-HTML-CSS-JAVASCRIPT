@@ -24,7 +24,7 @@ button.forEach((btns, index) => {
 
 // Add click event to show icon
 button.forEach((btns) => {
-    btns.addEventListener("click", () => {
+    btns.addEventListener("click", () => { 
         // Flip the card visually
         btns.classList.add('flipped');
 
