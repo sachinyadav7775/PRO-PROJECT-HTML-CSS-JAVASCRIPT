@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Todo Card</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="todo-card">
-        <header>
-            <h2>Today's Tasks</h2>
-            <p id="pending-tasks-text">1 task pending</p>
-        </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modern Todo Card</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-        <ul class="task-list" id="task-list">
-            <li class="task">
-                <div class="task-content">
-                    <label>
-                        <input type="checkbox" />
-                        <span class="custom-checkbox"></span>
-                        <span class="task-text">Buy groceries</span>
-                    </label>
-                    <button class="delete-btn">&times;</button>
-                </div>
-            </li>
-            <li class="task">
-                <div class="task-content">
-                    <label>
-                        <input type="checkbox" checked />
-                        <span class="custom-checkbox"></span>
-                        <span class="task-text">Morning Workout</span>
-                    </label>
-                    <button class="delete-btn">&times;</button>
-                </div>
-            </li>
-        </ul>
+    <body>
 
-        <div class="add-task">
-            <input type="text" id="task-input" placeholder="Add a new task..." />
-            <button id="add-btn">+</button>
+        <div class="todo-card">
+
+            <header>
+                <h2>Today's Tasks</h2>
+                <p id="pending-tasks-text">1 task pending</p>
+            </header>
+
+            <ul class="task-list" id="task-list">
+                <li class="task">
+                    <div class="task-content">
+                        <label>
+                            <input type="checkbox" />
+                            <span class="custom-checkbox"></span>
+                            <span class="task-text">Buy groceries</span>
+                        </label>
+                        <button class="delete-btn">&times;</button>
+                    </div>
+                </li>
+                <li class="task">
+                    <div class="task-content">
+                        <label>
+                            <input type="checkbox" checked />
+                            <span class="custom-checkbox"></span>
+                            <span class="task-text">Morning Workout</span>
+                        </label>
+                        <button class="delete-btn">&times;</button>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="add-task">
+                <input type="text" id="task-input" placeholder="Add a new task..." />
+                <button id="add-btn">+</button>
+            </div>
+            
         </div>
-    </div>
 
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
+
 </html>
