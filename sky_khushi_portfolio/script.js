@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize Typing Effects
     initTypingEffect('.typing-text', ['my universe', 'the digital world', 'my portfolio']);
-    initTypingEffect('.name-typing-text', ['sky_khushi', 'sky_sachin']);
+    initTypingEffect('.name-typing-text', ['sky_khushi', 'SKY@']);
 
     // Scroll Animation for Navbar
     const nav = document.querySelector('nav');
