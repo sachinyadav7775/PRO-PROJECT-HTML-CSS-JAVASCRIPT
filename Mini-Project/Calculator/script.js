@@ -1,44 +1,109 @@
-const display = document.getElementById('calculator-display');
+const display = document.getElementById("calculator-display");
 
-// Append value when button clicked
+// Add value to display
 function appendValue(value) {
+    if (display.value === "Error") {
+        display.value = "";
+    }
+
     display.value += value;
 }
 
-// Clear display
+// Clear all
 function clearDisplay() {
-    display.value = '';
+    display.value = "";
 }
 
-// Delete last character (backspace)
+
+// Delete last character
 function deleteLast() {
     display.value = display.value.slice(0, -1);
 }
 
 // Factorial function
-function factorial(n) {
-    if (n < 0) return NaN;
-    if (n === 0 || n === 1) return 1;
+function factorial(number) {
+
+    if (number < 0 || !Number.isInteger(number)) {
+        return "Error";
+    }
+
+    if (number === 0 || number === 1) {
+        return 1;
+    }
+
     let result = 1;
-    for (let i = 2; i <= n; i++) {
+
+    for (let i = 2; i <= number; i++) {
         result *= i;
     }
+
     return result;
 }
 
-// Calculate expression
+
+// Calculate result
 function calculate() {
+
     try {
+
         let expression = display.value;
 
-        // Supports multiple factorials in expression
+        if (expression === "") {
+            return;
+        }
+
+        // Convert percentage
+        expression = expression.replace(/%/g, "/100");
+
+        // Calculate factorial
         expression = expression.replace(/(\d+)!/g, function(match, number) {
-            return factorial(parseInt(number));
+            return factorial(Number(number));
         });
 
-        // Evaluate final expression
-        display.value = eval(expression);
+
+        let result = eval(expression);
+
+        if (result === Infinity || isNaN(result)) {
+            display.value = "Error";
+        }
+        else {
+            display.value = result;
+        }
+
     } catch (error) {
+
         display.value = "Error";
+
     }
 }
+
+// Keyboard support
+document.addEventListener("keydown", function(event) {
+
+    let key = event.key;
+
+    if (
+        (key >= "0" && key <= "9") ||
+        key === "+" ||
+        key === "-" ||
+        key === "*" ||
+        key === "/" ||
+        key === "." ||
+        key === "%"
+    ) {
+        appendValue(key);
+    }
+
+    else if (key === "Enter") {
+        calculate();
+    }
+
+    else if (key === "Backspace") {
+        deleteLast();
+    }
+
+    else if (key === "Escape") {
+        clearDisplay();
+    }
+
+});
